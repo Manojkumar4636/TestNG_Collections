@@ -38,7 +38,7 @@ public class ParametersExample {
 	@Test
 	@Parameters({"userName","userPass"})
 	public void loginTestCase(String uName, String uPass) {
-		        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32 (1)\\chromedriver.exe");
+		        System.setProperty("webdriver.chrome.driver", "ENTER YOUR CHROME DRIVER PATH");
 				WebDriver driver = new ChromeDriver();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -51,7 +51,7 @@ public class ParametersExample {
 				
 				WebElement clk = driver.findElement(By.name("Submit"));
 				clk.click();
-				
+				//Quit the browser
 				driver.quit();
 
 	}
